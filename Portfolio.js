@@ -15,3 +15,15 @@ hamburger.addEventListener('click', function () {
 		menu.style.display = "block"
 	} 
 });
+var http = require("http");
+
+http.createServer (fonction (demand, response) {
+// See the text HTTP
+// Statut HTTP: 200 OK
+// Type of content: text/plain
+response.writeHead(200, {'Content-Type' : 'text/plain'});
+// Send the response to the form “Hello World”
+response.end('Bonjour tot le monde\n');
+}).écouter(3000);
+// The console imprimera the message
+console.log('Server running at http://127.0.0.1:3000/');
